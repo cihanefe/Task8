@@ -84,50 +84,50 @@ void Solve(int M, int N, char** maze) {
     }
 
     else if (maze[agaY][agaX + 1] == ' ') {                      //right  
-        maze[agaY][agaX] = '+';
+        maze[agaY][agaX] = '.';
         agaX++;
         displayMaze(M, N, maze);
         Sleep(100);
     }
 
     else if (maze[agaY + 1][agaX] == ' ') {                     //down
-        maze[agaY][agaX] = '+';
+        maze[agaY][agaX] = '.';
         agaY++;
         displayMaze(M, N, maze);
         Sleep(100);
     }
 
     else if (maze[agaY][agaX - 1] == ' ') {                 //left
-        maze[agaY][agaX] = '+';
+        maze[agaY][agaX] = '.';
         agaX--;
         displayMaze(M, N, maze);
         Sleep(100);
     }
 
     else if (maze[agaY - 1][agaX] == ' ') {                 //up
-        maze[agaY][agaX] = '+';
+        maze[agaY][agaX] = '.';
         agaY--;
         displayMaze(M, N, maze);
         Sleep(100);
     }
     //çıkmaz yol (ingilizcesini bilmiyorum)("blocked path" olabilirdi aslında)
-    else if (maze[agaY][agaX + 1] == '+') {
-        maze[agaY][agaX] = '.';
+    else if (maze[agaY][agaX + 1] == '.') {
+        maze[agaY][agaX] = '*';
         agaX++;
         displayMaze(M, N, maze);
     }
-    else if (maze[agaY + 1][agaX] == '+') {
-        maze[agaY][agaX] = '.';
+    else if (maze[agaY + 1][agaX] == '.') {
+        maze[agaY][agaX] = '*';
         agaY++;
         displayMaze(M, N, maze);
     }
-    else if (maze[agaY][agaX - 1] == '+') {
-        maze[agaY][agaX] = '.';
+    else if (maze[agaY][agaX - 1] == '.') {
+        maze[agaY][agaX] = '*';
         agaX--;
         displayMaze(M, N, maze);
     }
-    else if (maze[agaY - 1][agaX] == '+') {
-        maze[agaY][agaX] = '.';
+    else if (maze[agaY - 1][agaX] == '.') {
+        maze[agaY][agaX] = '*';
         agaY--;
         displayMaze(M, N, maze);
     }
